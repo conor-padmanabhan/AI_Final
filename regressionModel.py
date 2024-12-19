@@ -2,11 +2,9 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import r2_score
-from sklearn.model_selection import train_test_split
 
 # Load and clean data
-file_path = '/Users/vfigueroa/Library/CloudStorage/OneDrive-BowdoinCollege/AI/AI_Final/deforestation_data_set_final - Sheet1 (1).csv'
+file_path = '/Users/vfigueroa/Library/CloudStorage/OneDrive-BowdoinCollege/AI/AI_Final/AI Final Data - master-data-set.csv'
 data = pd.read_csv(file_path)
 
 # Replace missing/unknown values with NaN and drop missing rows
@@ -15,7 +13,7 @@ data_cleaned = data.replace(to_replace=[np.nan, 'unknown', 'Unknown'], value=np.
 data_cleaned.drop('Air Temperature (K)', axis=1, inplace=True)
 data_cleaned.drop('Year', axis=1, inplace=True)
 data_cleaned.drop('Sum of Firespots', axis=1, inplace=True)
-data_cleaned.drop('Daytime surface temperature', axis=1, inplace=True)
+data_cleaned.drop('Daytime surface temperature (K)', axis=1, inplace=True)
 
 # Define the target and features
 target_col = "Parà Deforested Area Agg. (km^2)"  # Adjust to match your column name

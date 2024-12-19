@@ -46,7 +46,7 @@ def evaluate_model(y_test, y_pred):
 # Main function
 def main():
     # Load and prepare the data
-    file_path = '/Users/vfigueroa/Library/CloudStorage/OneDrive-BowdoinCollege/AI/AI_Final/deforestation_data_set_final - Sheet1 (1).csv'
+    file_path = '/Users/vfigueroa/Library/CloudStorage/OneDrive-BowdoinCollege/AI/AI_Final/AI Final Data - master-data-set.csv'
     X, y = load_and_prepare_data(file_path)
 
     # Scale the features
